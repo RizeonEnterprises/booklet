@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dil Ki Baat - Booklet</title>
+<style>
+    body {
+        background-color: #e6e2d8;
+        font-family: 'Georgia', serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 40px 20px;
+        gap: 50px; /* Adds space between the two open book parts */
+    }
+
+    /* Booklet Container */
+    .booklet {
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+        width: 1100px;
+        max-width: 100%;
+        min-height: 600px;
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        position: relative;
+    }
+
+    /* Spine of the book */
+    .booklet::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background: linear-gradient(to right, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.05) 100%);
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1), 2px 0 10px rgba(0,0,0,0.1);
+        transform: translateX(-50%);
+    }
+
+    .page {
+        flex: 1;
+        padding: 50px 45px 70px 45px; 
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-left {
+        background: linear-gradient(to right, #fcfbf9 0%, #ffffff 100%);
+        border-radius: 10px 0 0 10px;
+    }
+
+    .page-right {
+        background: linear-gradient(to left, #fcfbf9 0%, #ffffff 100%);
+        border-radius: 0 10px 10px 0;
+    }
+
+    h2 {
+        color: #7a634a;
+        font-size: 1.8em;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-weight: normal;
+        border-bottom: 1px solid #e0d8c3;
+        padding-bottom: 12px;
+    }
+
+    p {
+        font-size: 1.05em;
+        color: #4a4a4a;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    .highlight {
+        background: #f7f4ec;
+        padding: 18px;
+        border-left: 4px solid #bda88a;
+        margin: 15px 0;
+        font-style: italic;
+        color: #5c4d3c;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .highlight-red {
+        border-left-color: #e07a5f;
+        background: #fdf5f3;
+        color: #8a3a3a;
+    }
+
+    .signature {
+        margin-top: auto;
+        padding-top: 20px;
+        text-align: right;
+        font-style: italic;
+        color: #7a634a;
+    }
+
+    .page-number {
+        position: absolute;
+        bottom: 25px;
+        color: #c2b7a7;
+        font-size: 0.9em;
+    }
+
+    .page-left .page-number { left: 45px; }
+    .page-right .page-number { right: 45px; }
+
+    /* Responsive Design for smaller screens */
+    @media (max-width: 850px) {
+        .booklet {
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            min-height: auto;
+        }
+        .booklet::after {
+            display: none;
+        }
+        .page-left, .page-right {
+            border-radius: 10px;
+        }
+        .page-right {
+            border-top: 2px dashed #e6e2d8;
+        }
+        .page-left .page-number, .page-right .page-number {
+            bottom: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- BOOKLET PART 1 (Pages 1 & 2) -->
+<div class="booklet">
+    <!-- Left Page 1 -->
+    <div class="page page-left">
+        <h2>Helo Madam ji...</h2>
+        
+        <p>Main apni feelings express karne mein thoda bhuddu hu... bahar se dekho toh shayad main besharam type ka lagun. Par sach ye hai ki main har kisi ke sath comfortable nahi hota. Main sirf uske sath khulta hu jise main sach mein apna manta hu.</p>
+        
+        <p>Mujhe dusron par jaldi bharosa karne mein bahut problem hoti hai. I don't know aapke sath kab aur kaise vibe match ho gayi... par ab main aap par blindly trust karta hu. Isliye bina soche kuch bhi bol deta hu. Please, meri baaton ko kabhi galat mat samajhna.</p>
+
+        <p>Mera thoda alag scene hai. Jisko main dil se manta hu, uski choti-badi baatein mujhe bahut effect karti hain. Iska ye matlab nahi ki main 'cheap' hu ya ajeeb hu, bas mere emotions unke liye bahut deep hain. Kabhi kabhi darr lagta hai ki mere is over-sharing ya pagalpan ki wajah se aap irritate na ho jao.</p>
+
+        <p>Main janta hu sabki apni life aur space hoti hai. Mera irada kabhi aapko pareshan karna nahi hota, bas ek ajeeb sa sukoon milta hai aapse baat karke, isliye khud ko rok nahi pata.</p>
+        
+        <div class="page-number">Page 1</div>
+    </div>
+
+    <!-- Right Page 2 -->
+    <div class="page page-right">
+        
+        <div class="highlight">
+            Pehle main Dadu ke samne baith kar unse sab kuch share kar leta tha... Kuch baatein aisi hoti hain jo insan kisi aur se share nahi kar sakta, humesha mann mein rakhta hai. Main Dadu ko bahut miss karta hu... filhal mere liye sab kuch bahut mushkil ho raha hai. Par mujhe pata hai wo ab wapas nahi aa sakte. Main try kar raha hu ki normal rahu aur sab kuch akele sambhalu.
+        </div>
+
+        <p>Aap sochte hoge ki main poore din messages karke aapko pareshan karta hu... sach batau toh mera kisi se baat karne ka mann nahi hota aajkal. Bas aapse thodi positive vibes aati hain mujhe, isliye aapke samne main thoda extra khul jata hu.</p>
+        <p>or vo hr galti ko IT walo ki galti btana -- i like it...or hum dono ache Dost hai i promis me kbi b ye trust ni tutne duga or na hi aisa kch kruga jisse apko ye pachtawa ho ki mjh dost bnakr galti krdi or na hi me kisi se kch share kruga</p>
+        <p>Aapki sabse achi baat ye lagti hai ki aap judge nahi karte. Yeh jo bachha nikal kar aaya hai na andar se, isko jhelna aasan nahi hai, par aapki patience mujhe himmat deti hai. Waise toh main mature hi hu, life ki har problem handle kar leta hu... aur bhale hi abhi main thoda emotional mess hu, par aapko jab bhi meri zarurat hogi, ye 'Dost' humesha sabse pehle aapke sath khada milega.</p>
+        
+        <div class="page-number">Page 2</div>
+    </div>
+</div>
+
+<!-- BOOKLET PART 2 (Pages 3 & 4) -->
+<div class="booklet">
+    <!-- Left Page 3 (New Content) -->
+    <div class="page page-left">
+        <h2>Thodi Si Guidance...</h2>
+        
+        <p>Main aapse apni problems share kiya karunga, par please mujhe sahi guide karna ki kya karna chahiye aur kya nahi. Abhi meri life mein bahut mess hi chal raha hai... family mein bhi kaafi cheezein uljhi hui hain.</p>
+
+        <p>Mujhe hi sab kuch handle karna pad raha hai, lekin sach batau toh mujhe kuch samajh nahi aa raha ki main kya karu aur kya nahi. Main har waqt bas confused sa rehta hu.</p>
+        
+        <p>Mujhe umeed hai ki aap thoda guide kar doge... kyunki kehte hain na ki kabhi kabhi hum khud akele cheezon ko soch-samajh nahi paate. Lekin agar kisi apne se share karein, toh wo hamari situation samajh kar hume sahi raasta dikha sakta hai.</p>
+
+        <div class="page-number">Page 3</div>
+    </div>
+
+    <!-- Right Page 4 (New Content & Closing) -->
+    <div class="page page-right">
+        
+        <div class="highlight highlight-red">
+            Aaj kal mera mind kabhi kabhi bilkul ulta chalne lagta hai. Mujhe khud nahi pata hota ki main gusse mein kab, kisko, kya bolne lagu... Main bas kisi tarah khud ko roke hue hu.
+        </div>
+
+        <p>Main bilkul ek toote hue daage jaisa feel kar raha hu jo bas kisi tarah juda hua hai. In sab ke beech, aap meri life ka wo hissa ho jahan main thoda thehar kar saans le sakta hu.</p>
+
+        <p>Agar kabhi meri koi baat buri lage ya main zyada bol jaun, toh please sidhe daant dena par unhe galat mat samajhna. Thoda sa jhel lo bas mujhe...</p>
+
+        <div class="signature">
+            Mujhe meri sab kamiyon ke sath samajhne ke liye Shukriya.<br>
+            <strong>- Bhuddu Dost</strong>
+        </div>
+        
+        <div class="page-number">Page 4</div>
+    </div>
+</div>
+
+</body>
+</html>
