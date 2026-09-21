@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Grand Breakup Announcement</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+        background-color: #fce4ec;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .card-container {
+        background: #ffffff;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-inner {
+        border: 3px dashed #e91e63;
+        border-radius: 10px;
+        padding: 40px 30px;
+        text-align: center;
+        background: radial-gradient(circle, #fff0f5 0%, #ffffff 100%);
+    }
+
+    .header-title {
+        font-family: 'Great Vibes', cursive;
+        color: #d81b60;
+        font-size: 3.5rem;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        color: #555;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .announcement {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        padding: 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .highlight {
+        color: #e91e63;
+        font-weight: bold;
+    }
+
+    .names-section {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .name-badge {
+        padding: 10px 20px;
+        border-radius: 30px;
+        background: #fce4ec;
+        color: #d81b60;
+        box-shadow: 0 4px 10px rgba(216, 27, 96, 0.2);
+    }
+
+    .vs {
+        background: #333;
+        color: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .event-details {
+        text-align: left;
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .event-details h3 {
+        color: #ff4081;
+        margin-top: 0;
+        text-align: center;
+        border-bottom: 1px solid #555;
+        padding-bottom: 10px;
+    }
+
+    .itinerary {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .itinerary li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .time {
+        color: #ff4081;
+        font-weight: bold;
+        min-width: 90px;
+        margin-right: 15px;
+    }
+
+    .emoji-bg {
+        position: absolute;
+        font-size: 150px;
+        opacity: 0.05;
+        z-index: 0;
+    }
+
+    .emoji-1 { top: -20px; left: -20px; transform: rotate(-20deg); }
+    .emoji-2 { bottom: -20px; right: -20px; transform: rotate(20deg); }
+
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (max-width: 500px) {
+        .header-title { font-size: 2.5rem; }
+        .names-section { flex-direction: column; gap: 10px; }
+        .itinerary li { flex-direction: column; }
+        .time { margin-bottom: 5px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="emoji-bg emoji-1">💔</div>
+    <div class="emoji-bg emoji-2">🎉</div>
+    
+    <div class="card-inner">
+        <div class="content-wrapper">
+            <h1 class="header-title">The Grand Breakup<br>& Patch-up Party</h1>
+            <p class="subtitle">Sanjay, Tumhara Patta Katt Gaya Hai!</p>
+
+            <div class="announcement">
+                Bade hi dukh (sirf <strong>Sanjay</strong> ke liye) aur behad khushi (<strong>S. RadhaKrishnan</strong> ke liye) ke sath suchit kiya jata hai ki <span class="highlight">Pushpa</span> ne officially apna rasta badal liya hai. <br><br>
+                Kyunki bina bataye ghost karna achhi aadat nahi hai, isliye hum is pal ko dhoom-dhaam se celebrate kar rahe hain!
+            </div>
+
+            <div class="names-section">
+                <div class="name-badge">Pushpa ❤️ RadhaKrishnan</div>
+            </div>
+            <div style="font-size: 0.9rem; color: #777; margin-top:-20px; margin-bottom:20px;">(The Upgrade ✨)</div>
+
+            <p style="font-size: 1.2rem; font-weight: 600;">Farewell To:</p>
+            <div class="names-section" style="margin-top: -10px;">
+                <div class="name-badge" style="background: #e0e0e0; color: #555;">Sanjay 😭</div>
+            </div>
+
+            <div class="event-details">
+                <h3>Karyakram Ki Rooprekha (Itinerary)</h3>
+                <ul class="itinerary">
+                    <li>
+                        <span class="time">📅 Date:</span>
+                        <span>22 September 2026</span>
+                    </li>
+                    <li>
+                        <span class="time">📍 Venue:</span>
+                        <span>CCRT Auditorium</span>
+                    </li>
+                    <li style="border-top: 1px dashed #555; padding-top: 15px; margin-top: 15px;">
+                        <span class="time">11:00 AM</span>
+                        <span>Sanjay ko officially breakup ki news dena (Surprise!)</span>
+                    </li>
+                    <li>
+                        <span class="time">11:30 AM</span>
+                        <span>DJ, Dance aur Khana-Peena shuru 🍕🕺</span>
+                    </li>
+                    <li>
+                        <span class="time">12:30 PM</span>
+                        <span>Pushpa aur S. RadhaKrishnan ka naya Pyar (PDA Alert) ❤️</span>
+                    </li>
+                    <li>
+                        <span class="time">01:00 PM</span>
+                        <span>Sanjay ka Rona-Dhona (Note: Tissue papers humari taraf se free hain) 🧻😢</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <p style="margin-top: 25px; font-style: italic; color: #888;">Note: Kripya samay par pahunche, taaki Sanjay ke expressions miss na hon!</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
